@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://www.mocky.io/v2';
+const BASE_URL = 'https://www.mocky.io/v2';
 const team_uid = null;
 const employee_uid = null;
 
