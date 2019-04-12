@@ -1,0 +1,275 @@
+@import "../less/base.less";
+
+
+	// header styles
+	.Header {
+		height: 40px;
+		padding: 15px 30px;
+		background-color: @blue;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: #FFF;
+
+		svg {
+			height: 35px;
+			color: #FFF;
+		}
+
+		.Menu {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			margin: 0 0 0 20px;
+			flex: 1 0 auto;
+
+			li {
+				flex: 0 0 auto;
+				padding: 0 20px;
+				font-size: 1.4rem;
+				font-weight: @bold;
+				line-height: 67px;
+				border-bottom: 3px solid transparent;
+
+				i {
+					font-size: 1.8rem;
+					margin: 0 10px 0 0;
+				}
+
+				&:global(.active) {
+					border-bottom: 3px solid @secondary;
+				}
+			}
+		}
+
+		.MenuUser {
+			display: flex;
+			flex-direction: row;
+			flex: 0 0 auto;
+			font-size: 1.4rem;
+			font-weight: @bold;
+			line-height: 67px;
+			border-bottom: 3px solid transparent;
+
+			i {
+				font-size: 1.8rem;
+				line-height: 67px;
+
+				&.Avatar {
+					margin: 0 15px 0 0;
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+	// end header styles
+
+	// breadcrumb styles
+	.Breadcrumb_Teams_Container {
+		display: flex;
+		align-items: center;
+
+		.Breadcrumb {
+			color: @greyLight;
+			font-weight: @bold;
+			font-size: @h1;
+			margin: calc(@m-3 + 1rem);
+			margin-right: 0;
+			display: flex;
+		}
+
+		.Breadcrumb_Teams_Dropdown {
+			display: block;
+			position: relative;
+			color: @grey;
+			font-size: @h1;
+			font-weight: @bold;
+			padding: .75rem 1rem 1rem 0;
+			border: none;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			background-color: transparent;
+			white-space: nowrap;
+
+			option {
+				white-space: nowrap;
+			}
+		}
+		.Breadcrumb_Teams_Dropdown_Arrow_Container {
+			position: relative;
+			width: 100%;
+		}
+		.Breadcrumb_Teams_Dropdown_Arrow {
+			position: absolute;
+			left: 0;
+			top: -27px;
+			width: 22px;
+			opacity: .45;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%RkY5OTAw%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+			background-repeat: no-repeat, repeat;
+			background-size: 1rem auto, 100%;
+		}
+	}
+	// end breadcrumb styles
+
+	// content styles
+	.Content {
+		margin: @m-3;
+		margin-top: 0;
+		display: flex;
+
+		&.Wrap {
+			flex-wrap: wrap;
+		}
+
+		.Box {
+			width: 500px;
+			background-color: #FFF;
+			box-shadow: @shadow;
+			margin: @m;
+			flex-grow: 1;
+
+			.Box_Head {
+				color: @text;
+				font-weight: @bold;
+				font-size: @h1;
+				padding: 20px;
+			}
+			.Box_Body {
+				font-size: @p;
+				opacity: .85;
+				padding: 0 20px;
+			}
+			.Box_Buttons {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+			}
+			.Box_Button__Link {
+				color: @link;
+				border: 2px solid;
+				margin: 15px;
+				padding: 5px 20px;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				transition: @transition;
+				cursor: pointer;
+				width: 100%;
+				text-decoration: none;
+			}
+			.Box_Button:hover {
+				color: @linkHover;
+			}
+		}
+
+		.List {
+			width: 500px;
+			background-color: #FFF;
+			box-shadow: @shadow;
+			margin: @m;
+			flex-grow: 1;
+			max-height: 500px;
+			overflow-y: scroll;
+		}
+		.List_Item {
+			padding: 10px 15px;
+			height: 50px;
+			border-bottom: 1px solid @greyMedium;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			cursor: pointer;
+			transition: @transition;
+
+			span:first-of-type {
+				font-weight: @bold;
+			}
+			span:last-of-type {
+				color: @greyMedium;
+			}
+		}
+		.List_Item:hover {
+			background-color: @greyLight;
+		}
+
+		.Detail {
+			background-color: #FFF;
+			box-shadow: @shadow;
+			margin: @m;
+
+			.Detail_Head {
+				margin: @m-3;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.Detail_Employee_Image {
+					width: 80px;
+					height: 80px;
+					margin-bottom: 2rem;
+					border-radius: 50%;
+				}
+				.Detail_Employee_Desc {
+					margin-left: 15px;
+				}
+			}
+			.Detail_Nav {
+
+				.Detail_Nav_List {
+					display: flex;
+					width: 100%;
+					align-items: center;
+					flex-wrap: nowrap;
+					list-style: none;
+					background-color: @greyLight;
+
+					li {
+						padding: 1.5rem;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						text-align: center;
+						text-transform: uppercase;
+						background-color: @greyLight;
+						flex-flow: 1;
+						cursor: pointer;
+						transition: @transition;
+					}
+					li:hover {
+						color: @subtext;
+						background-color: @greyDark;
+					}
+				}
+			}
+			.Detail_Employee_Details {
+				margin: @m-3
+			}
+		}
+	}
+	// end content styles
+
+	// media queries
+	@media screen and (min-width: 1124px) {
+		.Box:last-of-type {
+			max-width: calc(50vw - 5rem);
+		}
+		.Content {
+			.Detail {
+				.Detail_Head {
+					flex-direction: row;
+					.Detail_Employee_Image {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 740px) {
+		.Content {
+			flex-wrap: wrap;
+		}
+	}
+	// end media queries
+
